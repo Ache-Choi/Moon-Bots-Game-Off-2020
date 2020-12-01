@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/enemies/hammerSideFx.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id=2]
+material = SubResource( 1 )
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 1 ), 0.0, 0.668531, 0, 0, Vector2( 1, 0.127273 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.675926 )
+colors = PoolColorArray( 0.5, 0, 1, 1, 1, 0.867188, 0, 1 )
+
+[node name="hammerSide" type="CPUParticles"]
+emitting = false
+amount = 40
+lifetime = 1.5
+one_shot = true
+speed_scale = 2.5
+explosiveness = 0.94
+randomness = 0.56
+mesh = SubResource( 2 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+damping = 10.0
+scale_amount = 1.8
+scale_amount_curve = SubResource( 3 )
+color_ramp = SubResource( 4 )
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

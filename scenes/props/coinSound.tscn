@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://coin.gd" type="Script" id=1]
+[ext_resource path="res://assets/soundMusic/sounds/coin.wav" type="AudioStream" id=2]
+
+[node name="coin" type="AudioStreamPlayer"]
+stream = ExtResource( 2 )
+volume_db = -10.0
+script = ExtResource( 1 )
+[connection signal="finished" from="." to="." method="_on_coin_finished"]

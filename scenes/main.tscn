@@ -1,0 +1,78 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://scenes/enemies/smallCube.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/cityScenes/cityScene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/props/coin.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/playerScenes/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/enemies/copterBot/copterContainer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/props/scaledPlus.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/main.gd" type="Script" id=7]
+[ext_resource path="res://scenes/playerBullets/playerGunBullet.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/playerScenes/effects/bulletExplosion.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/forrestScenes/forrestScene.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/forrestScenes/forrestScene2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/desertScenes/desertScene.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/mountainCaveScenes/mountainCave.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/playerUI/tryAgain.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/enemies/quadLegs.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/enemies/enemExplosion.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/enemies/bossHelper.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/props/treasureBox.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/enemies/bullets/enemyBullet.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/enemies/bullets/enemBulletExplosion.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/compCharacters/compCharacterPath.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/enemies/hammerEffect.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/enemies/hammerSideFx.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/enemies/bullets/quadBullet.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/moonScene/moonScene.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scenes/enemies/bullets/quadBulletExp.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scenes/playerScenes/effects/rocketEnterFX.tscn" type="PackedScene" id=27]
+[ext_resource path="res://scenes/enemies/hammerSideHit.tscn" type="PackedScene" id=28]
+[ext_resource path="res://scenes/enemies/sphereBot.tscn" type="PackedScene" id=29]
+[ext_resource path="res://scenes/soundMusic/playerSound.tscn" type="PackedScene" id=31]
+
+[node name="main" type="Spatial"]
+script = ExtResource( 7 )
+gunBullet = ExtResource( 8 )
+bulletExplosion = ExtResource( 9 )
+scenes = [ ExtResource( 2 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 25 ) ]
+enemyScenes = [ ExtResource( 17 ), ExtResource( 15 ), ExtResource( 29 ) ]
+player = ExtResource( 4 )
+transporterPath = ExtResource( 5 )
+cubeBot = ExtResource( 1 )
+enemExplosion = ExtResource( 16 )
+quadBulletExplosion = ExtResource( 26 )
+coin = ExtResource( 3 )
+hpPlus = ExtResource( 6 )
+treasureBox = ExtResource( 18 )
+enemyBullet = ExtResource( 19 )
+enemyBulletExplosion = ExtResource( 20 )
+hammerFX = ExtResource( 22 )
+hammerSideFX = ExtResource( 23 )
+hammerSideHit = ExtResource( 28 )
+quadLegsBullet = ExtResource( 24 )
+onRocketFx = ExtResource( 27 )
+compCharacterPath = ExtResource( 21 )
+tryAgainPage = ExtResource( 14 )
+uiSound = ExtResource( 31 )
+
+[node name="lightContainer" type="Spatial" parent="."]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="lightContainer"]
+transform = Transform( -0.599566, 0.172168, -0.781588, -0.627794, 0.50453, 0.592726, 0.496383, 0.846054, -0.194413, 13.66, 33.6614, -3.71091 )
+light_color = Color( 0.713726, 0.988235, 1, 1 )
+light_energy = 2.5
+shadow_enabled = true
+
+[node name="sceneContainer" type="Spatial" parent="."]
+
+[node name="playerContainer" type="Spatial" parent="."]
+
+[node name="player" parent="playerContainer" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -38.6, 5.452, -10.937 )
+
+[node name="enemyCont" type="Spatial" parent="."]
+
+[node name="bulletCont" type="Spatial" parent="."]
+
+[node name="bin" type="Spatial" parent="."]

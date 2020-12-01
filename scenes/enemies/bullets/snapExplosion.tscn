@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/enemies/bullets/snapExplosion.gd" type="Script" id=1]
+[ext_resource path="res://assets/soundMusic/sounds/snapExplosion.wav" type="AudioStream" id=2]
+
+[node name="snapExplosion" type="AudioStreamPlayer"]
+stream = ExtResource( 2 )
+volume_db = -8.0
+pitch_scale = 1.5
+script = ExtResource( 1 )
+[connection signal="finished" from="." to="." method="_on_snapExplosion_finished"]

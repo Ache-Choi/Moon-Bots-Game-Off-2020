@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/copterHeliceSeq.ogg-071d6fcbfc03942866efd8e0c2b792bc.oggstr"
+
+[deps]
+
+source_file="res://assets/soundMusic/sounds/copterHeliceSeq.ogg"
+dest_files=[ "res://.import/copterHeliceSeq.ogg-071d6fcbfc03942866efd8e0c2b792bc.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

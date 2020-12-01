@@ -1,0 +1,304 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://assets/images/spriteAsset.png" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/Acme-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/playerUI/purchasePanel.gd" type="Script" id=3]
+[ext_resource path="res://assets/fonts/AGENCYB.TTF" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+outline_size = 3
+outline_color = Color( 0.45098, 0.0823529, 0.364706, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.105882, 0.686275, 0, 1 )
+border_color = Color( 0.00784314, 0.211765, 0.0313726, 1 )
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0392157, 0.25098, 0, 1 )
+border_color = Color( 0.00784314, 0.211765, 0.0313726, 1 )
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.105882, 0.686275, 0, 1 )
+border_color = Color( 0.00784314, 0.211765, 0.0313726, 1 )
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.686275, 0, 0, 1 )
+border_color = Color( 0.00784314, 0.211765, 0.0313726, 1 )
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.333333, 0, 0, 1 )
+border_color = Color( 0.00784314, 0.211765, 0.0313726, 1 )
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.686275, 0, 0, 1 )
+border_color = Color( 0.00784314, 0.211765, 0.0313726, 1 )
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 5
+
+[sub_resource type="DynamicFont" id=10]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 50
+outline_size = 15
+outline_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=12]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("notEnough:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -385.26, -55.0218 ), Vector2( -385.26, -150 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("notEnough:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 1.6, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( 0.466516, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2662.07, 550 ), Vector2( 1320, 550 ), Vector2( 1360, 550 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4 ),
+"transitions": PoolRealArray( 0.420448, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1360, 550 ), Vector2( 1320, 550 ), Vector2( 2662.07, 550 ) ]
+}
+
+[node name="purchacePanel" type="Node2D"]
+position = Vector2( 2662.07, 550 )
+script = ExtResource( 3 )
+
+[node name="panel" type="Sprite" parent="."]
+modulate = Color( 0.4, 0.360784, 0.227451, 1 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 483, 31, 516, 437 )
+
+[node name="hpPlus" type="Node2D" parent="."]
+visible = false
+
+[node name="description" type="Label" parent="hpPlus"]
+margin_left = -176.0
+margin_top = -182.0
+margin_right = 167.0
+margin_bottom = -19.0
+custom_fonts/font = SubResource( 1 )
+text = "To extend Max. Hp value of 10 points"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="amount" type="Label" parent="hpPlus"]
+margin_left = -178.455
+margin_top = -16.8734
+margin_right = 164.545
+margin_bottom = 28.1266
+custom_fonts/font = SubResource( 2 )
+text = "- 500 Coins"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hpBtn" type="Button" parent="hpPlus"]
+margin_left = -186.655
+margin_top = 68.8728
+margin_right = -38.6546
+margin_bottom = 136.873
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "Purchase"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cancelHpBtn" type="Button" parent="hpPlus"]
+margin_left = 32.0
+margin_top = 70.0
+margin_right = 187.0
+margin_bottom = 139.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+text = "cancel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bulletPlus" type="Node2D" parent="."]
+
+[node name="description2" type="Label" parent="bulletPlus"]
+margin_left = -176.0
+margin_top = -182.0
+margin_right = 167.0
+margin_bottom = -19.0
+custom_fonts/font = SubResource( 1 )
+text = "To extend bullet damage points by 10"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="amount2" type="Label" parent="bulletPlus"]
+margin_left = -178.455
+margin_top = -16.8734
+margin_right = 164.545
+margin_bottom = 28.1266
+custom_fonts/font = SubResource( 2 )
+text = "- 500 Coins"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bulletBtn" type="Button" parent="bulletPlus"]
+margin_left = -186.655
+margin_top = 68.8728
+margin_right = -38.6546
+margin_bottom = 136.873
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
+text = "Purchase"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cancelBulletBtn" type="Button" parent="bulletPlus"]
+margin_left = 32.0
+margin_top = 70.0
+margin_right = 187.0
+margin_bottom = 139.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+text = "cancel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="notEnough" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -385.26
+margin_top = -55.0218
+margin_right = 356.74
+margin_bottom = 61.9782
+custom_fonts/font = SubResource( 11 )
+text = "Sorry, not enough Coins.Try again later."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/notEnough = SubResource( 12 )
+anims/sideIn = SubResource( 13 )
+anims/sideOut = SubResource( 14 )
+[connection signal="button_down" from="hpPlus/hpBtn" to="." method="_on_hpBtn_button_down"]
+[connection signal="button_down" from="hpPlus/cancelHpBtn" to="." method="_on_cancelHpBtn_button_down"]
+[connection signal="button_down" from="bulletPlus/bulletBtn" to="." method="_on_bulletBtn_button_down"]
+[connection signal="button_down" from="bulletPlus/cancelBulletBtn" to="." method="_on_cancelBulletBtn_button_down"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

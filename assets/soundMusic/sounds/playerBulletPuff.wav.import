@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/playerBulletPuff.wav-814972601f32590188d7f135a85b5569.sample"
+
+[deps]
+
+source_file="res://assets/soundMusic/sounds/playerBulletPuff.wav"
+dest_files=[ "res://.import/playerBulletPuff.wav-814972601f32590188d7f135a85b5569.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

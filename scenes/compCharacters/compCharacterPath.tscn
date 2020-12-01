@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/compCharacters/compCharacterPath.gd" type="Script" id=1]
+[ext_resource path="res://scenes/compCharacters/fatBunnyGeneric.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/compCharacters/bunnyTallGeneric.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/compCharacters/fatBunnyMechanic.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Curve3D" id=1]
+_data = {
+"points": PoolVector3Array( 4.53954, 0, 0.0756588, -4.53954, 0, -0.0756588, 2.1184, 0, -21.1467, 0, 0, -3.94842, 0, 0, 3.94842, -1.92304, 0, -14.8733, -10.0979, 0, 0.21348, 16.0951, 0, -0.231414, 25.3528, 0, -12.9674, -6.42802, 0, -0.44444, 5.08358, 0, 0.389734, 49.0438, 0, -12.81, -1.49545, 0, 6.13919, 1.49545, 0, -6.13919, 68.4846, 0, -15.9583, -4.56233, 0, 5.52283, 4.56233, 0, -5.52283, 82.516, 0, -42.8408, 0, 0, 0, 0, 0, 0, 98.5474, 0, -46.7242 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=2]
+_data = {
+"points": PoolVector3Array( -1.07095, 0, -22.9489, 2.14189, 0, 9.02655, 98.7534, 0, 66.2191, 7.03766, 0, 2.60087, -6.42567, 0, -3.36583, 73.1598, 0, 72.5489, 3.28547, 0, -0.87558, -3.28547, 0, 0.87558, 43.9703, 0, 67.2916, 3.50626, 0, 0.0020752, -3.50626, 0, -0.0020752, 35.8809, 0, 74.0328, 5.69397, 0, 1.80684, -5.69397, 0, -1.80684, 24.8254, 0, 66.4827, 5.77826, 0, 2.28659, -5.77826, 0, -2.28659, 13.5002, 0, 66.7523, 2.28535, 0, 5.37465, -2.28535, 0, -5.37465, -0.251808, 0, 42.4841, -0.938389, 0, 5.09899, 0.938389, 0, -5.09899, -1.86968, 0, 18.2159, -7.27155, 0, 0.315688, 15.3713, 0, -1.67321, 12.6557, 0, 13.4841, 3.21284, 0, -7.03765, -2.29489, 0, 10.2505, 48.7269, 0, 17.0251 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=3]
+_data = {
+"points": PoolVector3Array( -0.222467, 0, -8.73392, 5.4549, 0, -0.323483, -30.4949, 0, 32.4643, 2.36441, 0, -5.76846, 0.821714, 0, 3.18664, -24.0402, 0, 49.4745, -4.97702, 0, -6.77857, 6.0374, -1.45778, 8.39828, -16.5907, 0, 65.5062, 2.81764, 0, 2.04919, -3.39397, 0, -4.2905, -64.9851, 0, 64.8753, 2.11148, 0, 3.80671, -3.26766, 0, -3.17337, -65.7518, 0, 50.5664, -3.59906, 0, 2.49002, 3.19657, 0, -8.87287, -67.0312, 0, 38.5394, -7.31647, 0, 5.88886, 0, 0, 0, -61.6359, 0, 12.38 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=4]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, -3.18158, 0, 0.0964127, -65.5477, 0, -60.7877, -0.450531, 0, 2.44547, -0.578606, 0, -3.63808, -70.0002, 0, -65.7355, -1.58764, 0, 4.44003, 0.960564, 0, -2.94572, -67.0545, 0, -74.7007, -1.33889, 0, 2.64994, 0.646263, 0, -2.53709, -67.1234, 0, -90.471, -2.64548, 0, 0.633781, 3.64003, 0, -0.335007, -59.5086, 0, -95.6617, -9.03788, 0, -0.448158, 11.9509, 0, -0.298775, -17.6773, 0, -95.711, -14.1938, 0, -0.594139, 13.4218, 0, -0.429428, 15.2634, 0, -91.1007, 0.768456, 0, 5.63529, 0, 0, 0, 41.0429, 0, -99.2646 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[sub_resource type="Curve3D" id=5]
+_data = {
+"points": PoolVector3Array( 0, 0, 0, 0.715427, 0, -2.58129, -40.1074, 0, 98.0157, -1.29956, 0, 0.856049, 2.49336, 0, -0.68483, -37.0257, 0, 93.7487, -4.12306, 0, -0.587151, 2.87015, 0, 1.54637, -13.2226, 0, 93.8881, -4.24157, 0, 4.15401, 3.58133, 0, -5.20977, 14.6317, 0, 97.5625, 0, 0, 0, 0, 0, 0, 29.922, 0, 93.651, -7.43523, 0, 1.87872, 7.61793, 0, -3.81067, 63.696, 0, 93.7928, -1.74586, 0, 6.14575, -0.204979, 0, -3.45508, 63.9331, 0, 66.7682, -3.23712, 0, 5.1451, 1.23415, 0, -4.81361, 67.6743, 0, 56.6344, 3.57124, 0, 2.58363, -2.42432, 0, -1.68439, 66.9631, 0, 38.9736, 0.92733, 0, 4.53098, 0, 0, 0, 58.34, 0, 36.3746 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[node name="compCharacter" type="Spatial" groups=[
+"compCharacters",
+]]
+script = ExtResource( 1 )
+fatBunny = ExtResource( 2 )
+tallBunny = ExtResource( 3 )
+mechanicBunny = ExtResource( 4 )
+
+[node name="Path1" type="Path" parent="." groups=[
+"characterPath",
+]]
+curve = SubResource( 1 )
+
+[node name="PathFollow" type="PathFollow" parent="Path1"]
+transform = Transform( -0.257971, 0, -0.966143, 0, 1, 0, 0.966153, 0, -0.257968, 1.16419, 0, -21.379 )
+rotation_mode = 4
+
+[node name="Path2" type="Path" parent="." groups=[
+"characterPath",
+]]
+curve = SubResource( 2 )
+
+[node name="PathFollow" type="PathFollow" parent="Path2"]
+transform = Transform( 0.976558, 0, 0.215255, 0, 1, 0, -0.215255, 0, 0.976555, 98.7534, 0, 66.2191 )
+rotation_mode = 4
+
+[node name="Path3" type="Path" parent="." groups=[
+"characterPath",
+]]
+curve = SubResource( 3 )
+
+[node name="PathFollow" type="PathFollow" parent="Path3"]
+transform = Transform( -0.0330017, 0, 0.999454, 0, 1, 0, -0.999455, 0, -0.0330016, -30.4949, 0, 32.4643 )
+rotation_mode = 4
+
+[node name="Path4" type="Path" parent="." groups=[
+"characterPath",
+]]
+curve = SubResource( 4 )
+
+[node name="PathFollow" type="PathFollow" parent="Path4"]
+transform = Transform( 0.0126266, 0, -0.999918, 0, 1, 0, 0.99992, 0, 0.0126266, -65.5477, 0, -60.7877 )
+rotation_mode = 4
+
+[node name="Path5" type="Path" parent="." groups=[
+"characterPath",
+]]
+curve = SubResource( 5 )
+
+[node name="PathFollow" type="PathFollow" parent="Path5"]
+transform = Transform( -0.96159, 0, 0.274489, 0, 1, 0, -0.27449, 0, -0.961589, -40.1074, 0, 98.0157 )
+rotation_mode = 4
+
+[node name="Tween" type="Tween" parent="."]
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]

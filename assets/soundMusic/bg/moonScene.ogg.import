@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/moonScene.ogg-f404a25c06e93a136edcdf93bee262aa.oggstr"
+
+[deps]
+
+source_file="res://assets/soundMusic/bg/moonScene.ogg"
+dest_files=[ "res://.import/moonScene.ogg-f404a25c06e93a136edcdf93bee262aa.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

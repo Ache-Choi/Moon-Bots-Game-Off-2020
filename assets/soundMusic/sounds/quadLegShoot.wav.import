@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/quadLegShoot.wav-586dec1867e0d0218cf59a84f24edcbc.sample"
+
+[deps]
+
+source_file="res://assets/soundMusic/sounds/quadLegShoot.wav"
+dest_files=[ "res://.import/quadLegShoot.wav-586dec1867e0d0218cf59a84f24edcbc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

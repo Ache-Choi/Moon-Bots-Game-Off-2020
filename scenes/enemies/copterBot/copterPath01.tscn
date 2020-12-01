@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/enemies/copterBot/copterPath01.gd" type="Script" id=1]
+[ext_resource path="res://scenes/enemies/copterBot/copterBot.tscn" type="PackedScene" id=2]
+
+[node name="Path" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23, 5.853, 0.174 )
+script = ExtResource( 1 )
+copterBot = ExtResource( 2 )
+
+[node name="Path" type="Path" parent="."]
+curve = null
+
+[node name="PathFollow" type="PathFollow" parent="Path"]
+transform = Transform( -0.0371525, -0.996216, -0.0785842, 0, 0.0786395, -0.996893, 0.999308, -0.0370376, -0.00292163, 33.2119, 24.2388, -11.3489 )
+rotation_mode = 4
+
+[node name="path1Container" type="Spatial" parent="Path/PathFollow"]
+transform = Transform( 1, -7.45058e-09, 0, 0, 1, -9.31323e-10, 0, 1.02445e-08, 1, 0, 0, 0 )
+
+[node name="beginTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="botOutTimer" type="Timer" parent="."]
+one_shot = true
+[connection signal="timeout" from="beginTimer" to="." method="_on_beginTimer_timeout"]
+[connection signal="timeout" from="botOutTimer" to="." method="_on_botOutTimer_timeout"]

@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/enemies/bullets/enemBulletExplosion.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+
+[sub_resource type="SphereMesh" id=2]
+material = SubResource( 1 )
+radius = 0.1
+height = 0.2
+radial_segments = 8
+rings = 4
+
+[sub_resource type="Curve" id=3]
+_data = [ Vector2( 0, 0.726136 ), 0.0, 2.68396, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.37037, 0.675926, 1 )
+colors = PoolColorArray( 1, 0.319336, 0, 1, 1, 0, 0.243164, 1, 0.696777, 0.00272179, 0.169039, 1, 1, 1, 1, 0 )
+
+[node name="enemBulletExplosion" type="CPUParticles"]
+emitting = false
+amount = 50
+one_shot = true
+preprocess = 0.1
+explosiveness = 0.92
+mesh = SubResource( 2 )
+direction = Vector3( 0, 1, 0 )
+spread = 90.0
+gravity = Vector3( 0, -20, 0 )
+initial_velocity = 10.0
+linear_accel = 5.0
+damping = 10.0
+scale_amount_random = 1.0
+scale_amount_curve = SubResource( 3 )
+color_ramp = SubResource( 4 )
+script = ExtResource( 1 )

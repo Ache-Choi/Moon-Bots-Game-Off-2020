@@ -1,0 +1,336 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/fonts/Acme-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/playerUI/startPage.gd" type="Script" id=2]
+[ext_resource path="res://assets/images/settingsPage.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/startPage.jpg" type="Texture" id=4]
+[ext_resource path="res://scenes/playerUI/settings.gd" type="Script" id=5]
+[ext_resource path="res://assets/images/spriteAsset.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "openGame"
+length = 1.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("moonBotsText:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.2, 1.42, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 983.31, -146.757 ), Vector2( 983.31, -146.757 ), Vector2( 983.31, 359.493 ), Vector2( 983.31, 309.493 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("playSetBtns:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.2, 1.42, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 600 ), Vector2( 0, 600 ), Vector2( 0, -50 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ColorRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 0.659754, 0.659754, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ColorRect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.45, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.4
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.03, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.03, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("playSetBtns:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.07, 0.3 ),
+"transitions": PoolRealArray( 1.18921, 1.31951, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -50 ), Vector2( 0, 700 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("settings:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -1550, 0 ), Vector2( -1500, 0 ) ]
+}
+
+[node name="startPage" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+centered = false
+
+[node name="moonBotsText" type="Sprite" parent="."]
+position = Vector2( 983.31, 309.493 )
+scale = Vector2( 1.78252, 1.78252 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 3.05, 630.8, 784.7, 147.25 )
+
+[node name="playSetBtns" type="Node2D" parent="."]
+
+[node name="playBtnSprite" type="Sprite" parent="playSetBtns"]
+modulate = Color( 0.352941, 1, 0.862745, 1 )
+position = Vector2( 990.483, 586.279 )
+scale = Vector2( 2.09127, 2.09127 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 29.45, 521.4, 294.5, 85.5 )
+
+[node name="playText" type="Label" parent="playSetBtns"]
+margin_left = 811.039
+margin_top = 516.116
+margin_right = 1167.04
+margin_bottom = 658.116
+custom_fonts/font = SubResource( 1 )
+text = "Play"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settingsBtnSprite" type="Sprite" parent="playSetBtns"]
+modulate = Color( 0.352941, 1, 0.862745, 1 )
+position = Vector2( 990.483, 833.634 )
+scale = Vector2( 2.09127, 2.09127 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 23, 514, 310, 108 )
+
+[node name="settingsText" type="Label" parent="playSetBtns"]
+margin_left = 811.039
+margin_top = 763.471
+margin_right = 1167.04
+margin_bottom = 905.471
+custom_fonts/font = SubResource( 1 )
+text = "Settings"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnContainer" type="Control" parent="playSetBtns"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="playBtn" type="Button" parent="playSetBtns/btnContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 698.0
+margin_top = 511.0
+margin_right = 1292.0
+margin_bottom = 661.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settingsBtn" type="Button" parent="playSetBtns/btnContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 693.0
+margin_top = 745.0
+margin_right = 1297.0
+margin_bottom = 908.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="newGame" type="Button" parent="playSetBtns/btnContainer"]
+visible = false
+margin_left = 1468.42
+margin_top = 583.486
+margin_right = 1711.42
+margin_bottom = 812.486
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settings" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="panel" type="Sprite" parent="settings"]
+position = Vector2( 2483.52, 691.337 )
+texture = ExtResource( 3 )
+
+[node name="musicOn" type="Position2D" parent="settings"]
+position = Vector2( 2557, 705 )
+
+[node name="musicOff" type="Position2D" parent="settings"]
+position = Vector2( 2638, 705 )
+
+[node name="soundOn" type="Position2D" parent="settings"]
+position = Vector2( 2557, 782.05 )
+
+[node name="soundOff" type="Position2D" parent="settings"]
+position = Vector2( 2638, 782 )
+
+[node name="btnCont" type="Control" parent="settings"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="musicOnBtn" type="Button" parent="settings/btnCont"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 2531.0
+margin_top = 678.266
+margin_right = 2582.0
+margin_bottom = 726.266
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="musicOffBtn" type="Button" parent="settings/btnCont"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 2613.65
+margin_top = 689.64
+margin_right = 2663.65
+margin_bottom = 739.64
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="soundOnBtn" type="Button" parent="settings/btnCont"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 2529.0
+margin_top = 755.266
+margin_right = 2582.0
+margin_bottom = 804.266
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="soundOffBtn" type="Button" parent="settings/btnCont"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 2613.88
+margin_top = 756.266
+margin_right = 2661.88
+margin_bottom = 803.266
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="check" type="Sprite" parent="settings"]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 2556.83, 705.592 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 895, 584, 98, 93 )
+
+[node name="check2" type="Sprite" parent="settings"]
+modulate = Color( 0.988235, 0, 0, 1 )
+position = Vector2( 2555.42, 778.145 )
+texture = ExtResource( 6 )
+region_enabled = true
+region_rect = Rect2( 897, 582, 96, 93 )
+
+[node name="xBtn" type="Button" parent="settings"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 2647.0
+margin_top = 504.0
+margin_right = 2711.0
+margin_bottom = 569.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/openGame = SubResource( 2 )
+anims/playPressed = SubResource( 3 )
+anims/settingsPressed = SubResource( 4 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="playSetBtns/btnContainer/playBtn" to="." method="_on_playBtn_button_up"]
+[connection signal="button_up" from="playSetBtns/btnContainer/settingsBtn" to="." method="_on_settingsBtn_button_up"]
+[connection signal="pressed" from="settings/btnCont/musicOnBtn" to="settings" method="_on_musicOnBtn_pressed"]
+[connection signal="pressed" from="settings/btnCont/musicOffBtn" to="settings" method="_on_musicOffBtn_pressed"]
+[connection signal="pressed" from="settings/btnCont/soundOnBtn" to="settings" method="_on_soundOnBtn_pressed"]
+[connection signal="pressed" from="settings/btnCont/soundOffBtn" to="settings" method="_on_soundOffBtn_pressed"]
+[connection signal="pressed" from="settings/xBtn" to="settings" method="_on_xBtn_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

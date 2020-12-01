@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/quadLegIncomingWhistle.wav-e1237a51af06a26241d214b7051265bd.sample"
+
+[deps]
+
+source_file="res://assets/soundMusic/sounds/quadLegIncomingWhistle.wav"
+dest_files=[ "res://.import/quadLegIncomingWhistle.wav-e1237a51af06a26241d214b7051265bd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

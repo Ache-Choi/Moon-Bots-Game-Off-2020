@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bossHelperHammerHit.wav-a02c7152c0ac4a5e7837e015e64bd3fd.sample"
+
+[deps]
+
+source_file="res://assets/soundMusic/sounds/bossHelperHammerHit.wav"
+dest_files=[ "res://.import/bossHelperHammerHit.wav-a02c7152c0ac4a5e7837e015e64bd3fd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
